@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/New_Building.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/BackGround.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Images/ALIEN1.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,6 +21,9 @@ scale = Vector2( 0.248313, 0.235174 )
 texture = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 422.606, 320.363 )
+position = Vector2( 224.936, 358.988 )
 linear_velocity = Vector2( 5, 5 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 738.424, 431.694 )
 
