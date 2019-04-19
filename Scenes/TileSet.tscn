@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Images/apartment01.png" type="Texture" id=1]
+[ext_resource path="res://Images/Tileset.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Road" type="Sprite" parent="."]
+position = Vector2( 1, 2 )
+z_as_relative = false
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 1, 104, 50, 50 )
+
+[node name="Road_Support" type="Sprite" parent="."]
+position = Vector2( 114.992, 4.38629 )
+z_as_relative = false
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 894, 2, 50, 50 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Road_Support"]
+constant_linear_velocity = Vector2( 1, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Road_Support/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0 )
+
