@@ -24,8 +24,8 @@ func _physics_process(delta):
 	linear_velocity += GRAVITY_VEC * delta
 	linear_velocity.x = direction * WALK_SPEED
 	linear_velocity = move_and_slide(linear_velocity, FLOOR_NORMAL)
-	
-	if Input.is_action_just_pressed("shoot"):
+
+	if Input.is_action_just_pressed("ui_right"):
 		var bullet = preload("res://Scenes/bullet.tscn").instance()
 		bullet.position = $sprite/bullet_shoot.global_position #use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY, 0)
@@ -33,10 +33,15 @@ func _physics_process(delta):
 		get_parent().add_child(bullet) #don't want bullet to move with me, so add it as child of parent
 		shoot_time = 0
 
+	if Input.is_action_pressed('ui_left'):
+       new_anim = "explode"
 
 	if anim != new_anim:
 		anim = new_anim
 		$anim.play(anim)
+
+
+
 
 
 func hit_by_bullet():
