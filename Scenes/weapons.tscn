@@ -33,6 +33,7 @@ animations = [ {
 position = Vector2( 2140.01, 147.951 )
 scale = Vector2( 1.5494, 1.31085 )
 frames = SubResource( 1 )
+frame = 1
 speed_scale = 0.75
 playing = true
 centered = false
@@ -42,6 +43,6 @@ centered = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="AnimationPlayer"]
 position = Vector2( 431.64, 258.397 )
 frames = SubResource( 2 )
-frame = 1
+frame = 4
 playing = true
 
